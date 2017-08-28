@@ -1,0 +1,50 @@
+--Jack Daniel Kinne
+--CS 325 - Spring 2017 Design - Relation Structure
+--1.29.17
+--Human Relations on the Deathstar
+
+planet(PLANET_NAME, affiliation, destroyed)
+
+employee(EM_ID, EM_date_hired, EM_date_fired, EM_first_name, 
+	EM_last_name, EM_position, EM_prom_times, EM_typeof, planet_name)
+foreign key (planet_name) references planet
+
+imperial_officer_emp(EM_ID, rank_o)
+foreign key (em_id) references employee
+
+enlisted_emp(EM_ID, salary_em)
+foreign key (em_id) references employee
+
+hourly_emp(EM_ID, wage_per_hr)
+foreign key (em_id) references employee
+
+contractor_emp(EM_ID, sponsor_comp, sec_clear_con)
+foreign key (em_id) references employee
+
+promotion(PRO_ID, pro_old_title, pro_new_title, 
+	pro_date, EM_ID)
+foreign key (em_id) references employee
+
+destruction_level_event(DLE_CODENAME, dle_date, dle_bothans_killed, 
+	dle_spies_found, dle_target_planet, dle_administrator)
+ foreign key (dle_target_planet) references planet(planet_name),
+ foreign key (dle_administrator) references employee(em_id)
+
+employee_of_the_month(EOTM_ID, EOTM_month, EOTM_year, em_id)
+foreign key (em_id) references employee
+
+meeting(MEET_ID, meet_skip_level, meet_date, meet_issue, meet_loc, 
+	meet_chaired_by)
+foreign key (meet_chaired_by) references employee(em_id)
+
+employee_email(EM_ID, EM_EMAIL)
+foreign key	(EM_ID) references employee
+
+meeting_with_employees(EM_ID, MEET_ID)
+foreign key	(EM_ID) references employee(em_id),
+foreign key	(MEET_ID) references meeting(MEET_ID)
+
+dle_with_employees(EM_ID, DLE_CODENAME)
+foreign key	(EM_ID) references employee,
+foreign key	(DLE_CODENAME) references destruction_level_event
+

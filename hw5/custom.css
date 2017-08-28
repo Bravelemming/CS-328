@@ -1,0 +1,87 @@
+/*
+    by: Jack Daniel Kinne
+    CS 328 HW 5 problem 6
+    last modified: 3.5.17
+*/
+
+
+body 
+{ 
+	font-family: Segoe UI, Helvetica, Sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: #3399ff; 
+	margin: 0; 
+	padding: 0;
+}
+
+h1,h2
+{
+	background: 	#6699ff;
+	margin: 10px; 
+	padding: 10px;
+	border-bottom: solid black;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: solid black;
+}
+
+header
+{
+	margin: 10px;
+	padding: 10px;
+	text-align: right;
+}
+
+form
+{
+	background: 	#6699ff;
+	margin: 10px; 
+	padding: 10px;
+	border: solid black;
+	width: 90%;
+}
+
+footer
+{
+	background: 	#6699ff;
+	margin: 10px; 
+	border-bottom: solid black;
+	border-top: solid black;
+}
+
+option, input
+{
+	background-color: #3399ff;
+}
+
+.w3c
+{
+	float:right;
+	margin: 10px;
+}
+
+h1:hover, h2:hover, form:hover, footer:hover
+{ 
+    background-color: #944dff;
+    border-top: solid purple;
+    border-bottom: solid purple;
+    
+}
+
+img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid black;
+	opacity: .75;
+
+}
+
+img:hover
+{
+	opacity: .50;
+	border: solid purple;
+}

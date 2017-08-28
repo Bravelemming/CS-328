@@ -1,0 +1,19 @@
+fieldset element - block element, can be nested in a form.
+
+used to  logically group elements together such as logically related form controls
+
+by default changable using  css, displays with a thin solid border
+around the contained elements.  
+
+fieldset can contain a legend element whose content is by default
+text displayed within that fieldsets border
+
+if you set a value attribute for a textfield its value will be the initial content of that textfield
+
+placeholder attribute's value will appear in the box, in a lighter grey and will disappear when the user types, but reappear if they delete - nice alternative for instructions
+
+
+<label></label>
+
+
+

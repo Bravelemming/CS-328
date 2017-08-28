@@ -1,0 +1,105 @@
+/*
+//Halie Carton  Jack Daniel Kinne
+//3.10.17
+// here:  http://nrs-projects.humboldt.edu/~drk10/lab8/oracle-test.php
+*/
+
+body
+{
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: lightblue;
+    color: purple;
+}
+
+/*--
+    center the form's fieldset, and add a little space
+    on the inner bottom
+--*/
+    
+fieldset
+{
+    width: 18em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: .3em;
+}
+
+/*-- so the fieldset's legend text fits on one line...! --*/
+
+legend
+{
+    font-size: 90%;
+}
+
+/*-- make the labels (and their textfields) line-up nicely --*/
+
+label
+{
+    float: left;
+    text-align: right;
+    width: 6em;
+    margin-right: 0.5em;
+}
+
+/*-- put a LITTLE space between the textfields --*/
+
+input
+{
+    margin-bottom: 0.3em;
+}
+
+/*-- and LESS space under the form's submit button --*/
+
+input[type="submit"]
+{
+    margin-bottom: 0;
+}
+
+/*-- use a div to allow centering of the form's submit button --*/
+
+div.submit
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 3.75em;
+}
+
+/*-- 
+    put a tasteful border on the results' table,
+    not TOO close to the table contents
+--*/
+
+table, tr, th, td
+{
+    border: thin solid black;
+    border-collapse: collapse;
+    padding: 0.25em;
+}
+
+/*--
+    add a little bottom padding to the caption
+--*/
+
+caption
+{
+    padding-bottom: 0.1em;
+}
+
+/*-- and right-justify just the numeric columns --*/
+
+td.numeric
+{
+    text-align: right;
+}
+
+/*--
+    tastefully minimize the validation info at page bottom
+--*/
+
+footer
+{
+    font-size: smaller;
+}
+
+/*-- end of try-oracle.css --*/

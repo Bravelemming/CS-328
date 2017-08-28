@@ -1,0 +1,91 @@
+FRIDAY LAB QUIZ
+
+given some portion of a html and php document
+
+some portion of a .js file
+
+practicing with event handler functions
+
+you will show what you could add, and where, using
+onobtrusive-style-javascript.
+
+-- button element that calls a javascript function
+
+-- form element that doesn't go unless it validates.
+	(onsubmit attribute, whose value returns true or false)
+
+intro to XML, and then JSON
+
+course text, chapter 12, 12.3, 12.4
+
+eXtensible Markup Language
+
+a language for making up your own mark up language
+by specifying rules for creating mark up languages
+
+gives you a way to organize data per your needs
+
+syntax for creating your own elements, which are not predefined
+
+when some group decides to formalize a set of XML elemnts and rules for a given domain == Document Type Definition (DTD or XML schema)
+
+xml validated against a DTD / XML schema is valid XML
+
+xml starts with;
+------------
+starts with an XML declaration
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
+	"HTTP:www.w3.org/TR/xhtml11/DTD/xhml11.dtd">
+
+then you have the root elements start tag
+then the outermost element that encloses all other content
+
+all elements are started and ended with their tag
+
+they can have children
+
+no base datatypes or loops
+
+there is only a describer.
+
+get next child, get previous child, get element by id.
+
+xml element names are case sensitive
+xml must be properly nested
+xml start tags may contain attributes
+but each must have a value
+values must be quoted
+
+data should be a child
+if its about it, it can be a attribute
+
+<file type="gif"> myPrettyPony.gif </file>
+
+the validator on html will check these basic rules.
+
+the dTD will offer HOW to use the rest.
+
+
+somtime it is useful to describe the type of content an element has...
+
+element content - just other elements, like root
+mixed content - text and other elements
+simple content - just text 
+empty content - nuting
+
+
+
+
+<head>
+<script scr = "saymagicword.js" type = "text/javascript" >
+<script>
+
+<script type="text/javascript">
+window.onload = function()
+{
+	var mybutton = document.getElementById("magicbutton");
+	mybutton.onlick saymagicword;
+};
+</script>

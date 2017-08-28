@@ -1,0 +1,138 @@
+friday lab quiz
+
+stripping tags or transforming html special characters into display only versions
+
+ask to write an expression that adds some attribute to $_session and give it a stated value
+
+ask to write an expression whose value would be given attribute within $_SESSION["x"];
+
+-------------------------
+
+$str = 'this <p>';
+echo htmlspecialchars($str, ENT_QUOTES);
+
+$text = 'this <p>';
+echo strip_tags($text);
+
+//setter
+<?php
+$_SESSION["favoritecolor"] = "green";
+?>
+
+//accessor
+<?php 
+$_SESSION["favoritecolor"];
+?>
+
+
+
+session_destroy();
+//destroys a current session
+
+session_regenerate_id(TRUE);
+//resets session id, starting with zero.
+
+session_start();
+//makes a new session
+
+
+always draw your finite state machine, because even the attempt to draw it will generate better code along the way.
+
+
+
+place calling functions from php documents in the <head>
+
+<head>
+
+<?php 
+	require_once("request_quest.php");
+
+?>
+
+</head>
+
+
+
+<body>
+
+	<?php
+		if (! array_key_exists('next_page', $_SESSION))
+		{
+			request_name();
+			$_SESSION['next_page'] = "quest";
+		}
+		elseif($_SESSION['next_page'] == "quest")
+		{
+			request_quest();
+			$_SESSION['next_page'] == "color";
+		}
+		elseif(#_SESSION['next_page'] == "color")
+		{
+			request_color();
+			$_SESSION['next_page'] == "farewell";
+		}
+		elseif($_SESSION['next_page'] == "farewell")
+		{
+			show_farewell();
+			session_destroy();
+		}
+		else
+		{
+			//I hope i can't reach this
+			session_destroy();
+			session_regenerate_id(TRUE);
+			session_start();
+		}
+
+			?>
+
+</body>
+
+
+
+
+
+
+//in request_name.php
+<?php
+
+	function request_name()
+	{
+		?>
+		<p> callled function request_quest </p>
+		<?php
+	}
+
+?>
+
+
+//in complain_and_exit.php
+<?php
+/* 
+	function: complain_and_exit : string -> void
+	purpose: expects a string saying what should have been entered
+	responds with a complaint screen making that complaint
+	and destroying current session
+
+	requires: 328footer.html
+*/
+	function complain_and_exit($missing_info_type)
+	{
+		?>
+
+		<html>
+		<body>
+		<h2> You did not enter any <?= $missing_info_type ?>   </h2>
+
+		<form method="post"
+			action="<?=htmlentities($_SERER['PHP_SELF'],ENT_QUOTES) ?>">
+		</form>
+
+		<?php
+		session_destroy();
+		require_once('328footer.html');
+	}
+
+?>
+</body>
+</html>

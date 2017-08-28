@@ -1,0 +1,23 @@
+--Jack Daniel Kinne
+--CS 328 - CSS3 coding standards
+
+--problem 1 part a
+
+<link href="my-style.css" type="text/css" rel="stylesheet" />
+
+--problem 1 part b
+
+head element
+
+--problem 1 part c
+
+Normalize should be first, always.  Therefore, our CSS style sheet should be AFTER.
+
+--problem 1 part d
+
+em or % are preferred to ensure responsiveness in design.  (although that would be predicated on the fact that the rest of the design is also made to respond to the users platform.)
+
+--problem 1 part e
+
+Nope.  A table is for holding table-data, CSS is for layouting an HTML page.
+

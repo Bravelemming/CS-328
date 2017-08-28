@@ -1,0 +1,62 @@
+javascript in the book
+
+client side javascript
+----------------------
+
+javascript is actually an implementation of a web standard called ECMAScript 6
+
+ecmascript spec does not describe the document object model
+
+the DOM defines the way in which HTML document objects
+are exposed to your javascript
+
+you can embed client side JS within HTMl, within a php doc, or as an external files with the suffix .js
+
+to be seperate; try to limit JS to within the head element inside a hTML or PHP doc
+
+<script src="desired_file_or_URL.js" type="text/javascript">
+</script>
+
+when you put the JS inside the script tags, you don't need a SRC
+
+-------
+how do browsers load documents?
+fetch requested document (executed clientside)
+if it encounters a scripted element offsite, it pulls it and downloads and executes the script, stopping the parse on the HTML document
+the concern is that your website stops loading while you load jS.  this is a problem if you are including large JS libraries.
+
+HTML5 attributes for the script element to continue parallel downloading and HTML loading
+<script async="async">  === script can be downloaded at the same time as parsing AND other script downloads (no script dependencies) 
+<script defer="defer"> === execute scripts in order of appearance, most likely because there are dependencies.
+this does not block the browser from merrily parsing HTML
+while downloading the scripts
+
+
+-----------------
+
+// dont need script tags in an external .js
+
+function sayMagicWord()
+{
+	var nameField = document.getElementById("enteredName");
+
+	if (nameField.value === "")
+	{
+		alert("PLEASE to unknown person");
+	}
+	else
+	{
+		alert("please!" + nameField.value);
+	}s
+	
+}
+
+
+
+
+
+
+
+
+
+

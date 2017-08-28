@@ -1,0 +1,59 @@
+AJAX
+
+basic idea, still make a request but the response is less than a full page or document, and client side javascript uses that response to modify the current page, instead of replacing the whole page.
+
+the client web browser creates a javascript objecct called XMLHttpRequest
+
+this XMLHttpRequest object makes the request from an application web server
+
+the data is sent back by application web server, coould be in JS, XML, or JSON,
+
+once it arrives at client browser, javascript code appropriately injects it into the current displayh page.
+
+ajax is not a programming language or product you need to install.  its built in to the web browser.  built on open standards.  must have javascript enabled.
+
+
+----
+
+course text chapter 12:
+
+button to download a file into a text field.
+
+/* in javascript , in a onscreen control elements event handler
+*/
+
+var ajaxReq = new XMLHttpRequest();
+ajaxReq.open("GET", "desired_url", false);
+ajaxReq.send(null);
+
+//because of the false in open methods third argument,
+//the next line is not reached until the web request
+//has been completed and the response recieved.
+
+<script>
+window.onload = 
+function()
+{
+	var loadButton = document.getElementById("load");
+	loadButton.onclick = loadClick;
+};
+
+function loadClick()
+{
+	//make a new XMLHttpRequest object
+	var ajaxReq = new XMLHttpRequest();
+	ajaxReq.open("GET", "notes.txt", false);
+	ajaxReq.send(null);
+
+	//when request is completed, you'll reach this
+
+	var outputTextArea = document.getElementById("output");
+	outputTextArea.value = ajaxReq.responseText;
+
+	// .responseText is the return of ajaxReq
+
+
+}
+</script>
+
+

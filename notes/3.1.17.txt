@@ -1,0 +1,125 @@
+
+
+css positioning
+
+5 possible values:
+
+static (default)
+relative absolute fixed inherit
+
+<div class ="box"> </div>
+<div class ="box box_offset_left"> </div>
+<div class ="box_corner"> </div>
+
+.box 
+{
+	width: 10em;
+	height: 5em;
+	background-color: blue;
+	border: thin solid black;
+}
+
+
+.box_offset_left
+{
+	position: relative;
+	left: 8em;
+}
+
+.box_corner
+{
+	position: absolute; //relative to the document
+	top: 0;
+	left: 0;
+	width: 10em;
+	height: 5em;
+	background: #b7d84b;
+}
+
+
+
+#box_fixed
+{
+	position: fixed;
+	background: yellow;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+INTRO TO PHP!::
+
+
+
+<?php
+
+?>
+
+
+<?=      ?> //this is the so called php expression tag
+
+
+
+//note that php is executed on the application tier
+
+//the client only sees the results, you can't view the // php from the client tier.
+
+how does the client know that there is php to be processed?
+
+you end the nme of the file containing php with the suffix : ".php"
+
+
+
+four types supported in php : integer string boolean array
+
+variable names in php start with a '$' and auto select type
+
+
+<?php
+	
+	$answer = "hi, i'm a php script!";
+
+
+
+	echo answer;
+
+?>
+
+
+server-side includes
+
+lets you include the contents of  file within a php document
+
+require // if i cant do it, its an error
+include // if i can't do it, its a warning
+require_once
+include_once
+
+
+their argument: a string containing the URL of the file to be included. (can be relative)
+
+<?php
+	require_once("328footer.html");
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

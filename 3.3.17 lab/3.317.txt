@@ -1,0 +1,169 @@
+
+
+PHP
+
+variables start with a $ 
+
+
+
+= is assignment
+
+== is comparison where we don't care about the type
+
+=== is comparison when we do care about the type
+
+!= comparison for not equal where we don't care about the type
+
+!== comparison for not equal where we care about the type
+
+boolean: TRUE FALSE
+
+if (expression) {
+	
+}
+elseif (expression) {
+	
+}
+else
+ expression;
+
+
+fuunctions!
+keyword function-name ($parameter-name){}
+
+function function-name ($param_name, $param_name){
+	statements;
+	return;	
+}
+
+
+INtERACTING WIth FORMS:
+-----------------------------------------
+
+<form method = "post" action = "www........../welcome.php">
+
+
+
+<input type = "submit" />
+</form>
+
+
+
+php supports 4 scallar types;
+integer float string boolean
+
+two non scalar types;
+arrays and objects
+
+php has very flexible arrays
+
+php also provies a number of superglobal associative arrays
+their names are all uppercase and have an underscore after dollar sign
+
+$_POST == superglobal array
+
+$_POST will contain the name = value pairs from a submimtted form whose method ="post"
+
+you can access a given value for a name with $_POST["thatname"]
+
+$_GET will contain name=value pairs for method="get"
+
+
+php provides functions that fight bad stuff from the user like cross site scripting
+
+
+strip_tags : expects a string, returns that string with all angel bracket tags removed
+<p> Welcome 
+<?= strip_tags($_POST["name"]) ?> 
+, how are you?
+</p>
+
+htmlspecialchars : expects a string and returns string with html special characters encoded (&lt;)
+
+<?= strip_tags($_POST["name"]) ?> 
+
+-----------------------
+
+
+connecting to oracle form php
+(from nrs-projects to the hsu oracle student database)
+
+need to set up a connection string
+try to log into database
+
+set up a sql pl/sql to be executed
+
+execute it
+
+obtain loop the results
+
+close the statement
+
+close the connection
+
+$db_conn_str = "DESCRIPTION = (ADDRESS = (pROTOCOL = TCP)"."
+"(hOST = cedar.humboldt.edu)".
+"(PORT = 1521))".
+"(CONNECT_DATA = (SID = STUDENT)))";
+
+php has many dB packages!  we are using one called OCI
+oracle call interface
+
+
+$conn = oci_connect($username, $password, $db_conn_str);
+
+if ($conn == FALSE){
+	//complain and quit
+}
+
+$empl_query = "select hiredate, salary, commission ".
+				"from empl";
+
+$stmt = oci_parse($conn, $empl_query);
+
+oci_execute($stmt, OCI_DEFAULT);
+
+//loop through results
+
+while (oci_fetch($stmt))
+{
+	oci_result($stmt, "empl_last_name");
+}
+
+oci_free_statement($stmt);
+oci_close($conn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

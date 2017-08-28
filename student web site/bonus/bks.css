@@ -1,0 +1,63 @@
+/*
+    by: Jack Daniel Kinne
+    CS 328 bonus
+    last modified: 3.20.17
+*/
+
+
+body 
+{ 
+	font: 1.25em georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: #FAEBD7; 
+	margin: 0; 
+	padding: 0;
+}
+
+h1,h2
+{
+	background: 	#DCDCDC;
+	margin: 10px; 
+	padding: 10px;
+	border: solid black;
+}
+
+header
+{
+	margin: 10px;
+	padding: 10px;
+	text-align: right;
+	text-shadow: 2px black; 
+}
+
+form
+{
+	background: 	#DCDCDC;
+	margin: 10px; 
+	padding: 10px;
+	border: solid black;
+}
+
+footer
+{
+	background: 	#DCDCDC;
+	margin: 10px; 
+	border: solid black;
+}
+
+option, input
+{
+	background-color: #FAEBD7
+}
+
+.w3c
+{
+	float:right;
+	margin: 10px;
+}
+
+h1:hover, h2:hover, form:hover, footer:hover
+{ 
+    background-color: hotpink;
+}

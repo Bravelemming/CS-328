@@ -1,0 +1,60 @@
+/* padding inside the border, margin outside 
+ top bottom left right 
+
+    by: Jack Daniel Kinne
+    CS 328
+    last modified: 3.19.17
+
+here: 
+http://nrs-projects.humboldt.edu/~drk10/bonus/php-play.css
+
+ */
+
+
+body
+{ 
+	font: 1.25em georgia, sans-serif;
+	line-height: 1.88889;
+    background-color: lightblue;
+    color: black;
+	margin: 10px; 
+	padding: 10px;
+}
+
+#bonusResult
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: .3em;
+}
+
+
+footer 
+{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 75%;
+	border: 3px solid black;
+	border-radius: 25px;
+}
+
+
+#w3c 
+{
+	float: right;
+}
+
+
+
+
+/*float property: left right inherit none; */
+
+/* normal flow; blocks are stacked on top to eeach other , inline go left to right */
+
+/* inherit: inherit the float of your parent*/
+
+/* floats vertical positioning is determined by the html tag position in the document */
+
+

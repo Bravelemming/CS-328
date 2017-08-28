@@ -1,0 +1,50 @@
+/* 
+    Jack Daniel Kinne
+    CS 328 HW 5
+    Problem 3
+    3.5.17
+*/
+
+body 
+{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background-color: rgb(255, 204, 102);
+}
+
+.titles
+{
+	margin: left;
+	padding: 10 px;
+	width: 50%;
+	border: 3px solid black;
+	border-radius: 25px;
+
+}
+
+#reg
+{
+	width: 60%;
+	margin: auto;
+	padding: 5px;
+	border: 2px solid grey;
+	border-radius: 25px;
+	background-color: lightblue;
+
+}
+
+footer 
+{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 75%;
+	border: 3px solid black;
+	border-radius: 25px;
+}
+
+
+#w3c 
+{
+	float: right;
+}
+

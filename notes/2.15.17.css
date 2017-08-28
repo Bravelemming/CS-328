@@ -1,0 +1,75 @@
+p
+{
+	color: red;
+	text-align: center;
+}
+
+body 
+{
+	margin-left: 2em;
+}
+
+h1,h2,h3
+{
+	color: #00ff00;
+}
+
+/* class selectors */
+
+p.right
+{
+	text-align: right;
+}
+
+#uniquename /* <h2 id="uniquename"> CS 328 </h2> */
+{
+	color: white;
+}
+
+
+/* 
+You can use unique id's as link anchors!
+<p> jump to <a href="#namelabel"> namelabel </a> </p>
+
+*/
+
+/* you can also select off of types of attribute values */
+input[type="text"]
+{
+	color: #00ff00;
+}
+
+
+option[value="tea"]
+{
+	font-style: italic;
+}
+
+
+body
+{
+	font-family: "Courier New", monospace, garamond;
+	font: italic bold 1em monospace;
+} /* if the first isn't available, it tries the next */
+
+
+
+
+
+
+
+/*
+
+
+
+<input type="text" name="misc">
+<select name="beverage">
+	<option value="tea"> tea </option>
+	<option value="coffee"> coffee </option>
+</select>
+</input>
+
+*/
+
+
+

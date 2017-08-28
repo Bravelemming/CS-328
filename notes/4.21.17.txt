@@ -1,0 +1,72 @@
+
+JSON
+
+javascript objecct notation
+
+structures and describes data
+
+it is NOT the same as JS object syntax
+
+plaintext data format
+
+you can declare an individual object by writing a set of property /data field /value pairs (seperated by commas)
+inside curly braces
+
+{
+	property-name: value,
+	property-name: value,
+	property-name: value,
+	name: "phillip fry",
+	age: 23,
+	friends: ["farnsworth", "bender"]
+}
+
+
+JSON objects may not have methods as property values
+
+JSON property / data field names are expected to be quoted
+
+some characters are forbidden as JSON data (compatiblity)
+
+----json example
+
+{
+	"time": "1:57",
+	"size": 458
+}
+
+--javascript example
+
+var data = JSON.parse(myJSONData);
+//data is now a javascript object of jSON
+
+data.body == "so is there a title yet?";
+
+//javascript to JSON conversion
+var anotherJSONthingy = JSON.stringify(myjavascriptobject);
+
+
+
+--PHP example
+
+
+
+$myJSONdata ='{"sound": "moo", "volume": 13}';
+
+
+$phpversion = json_decode($myJSONdata);
+
+$phpversion->sound == "moo";
+
+$phpversion->{"volume"} == 13;
+
+-- you can also read this data from a file:
+
+$myJSONstring = file_get_contents("my_json_data.json");
+$phpobjecct = json_decode($myJSONstring);
+
+
+
+
+
+

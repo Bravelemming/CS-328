@@ -1,0 +1,10 @@
+AJAX
+SJAT
+
+
+function loadClick(){
+	var ajaxReq = new XMLHttpRequest();
+
+	
+
+}

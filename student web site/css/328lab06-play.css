@@ -1,0 +1,125 @@
+/* padding inside the border, margin outside 
+ top bottom left right */
+
+
+
+
+h1 
+{
+	border: 1em solid red;
+	border-left: thick dotted #ff0088;
+	border-bottom-color: rgb(0,128,128);
+	border-radius: 25px;
+	background-color: yellow;
+	border-right-style: double;
+
+	padding: 1em;
+}
+
+h2
+{
+	padding: 0.5em;
+	background-color: black;
+
+}
+
+table, td, th
+{
+	border: 0.1em solid black;
+	/*border-radius: 25px; radius and collapse do not work together*/
+	border-collapse: collapse;
+	padding: 0.25em;
+}
+
+
+legend
+{
+	padding-left: 4em;
+	padding-top: 1em;
+	background-color: green;
+}
+
+body
+{
+	margin: 1em;
+}
+
+p
+{
+	margin: 2em;
+	background-color: yellow;
+
+}
+
+
+p.lovely
+{
+	margin-left: 1em;
+	margin-right: 3em;
+	background-color: cyan;
+}
+
+
+/* block elements have a width property by default, 
+the entire document width across.  also works for IMG */
+
+
+.width1
+{
+	border: 0.25em solid black;
+	width: 12em;
+}
+
+
+
+.width2
+{
+	text-align: right;
+}
+
+.sidebar{
+	float: right;
+	background-color: silver;
+	width: 15em;
+}
+
+/*one way to center a block element: 
+give a width
+ then margin left, margin right, auto;  */
+
+table {
+	width: 50%;
+	margin-right: auto; 
+	margin-left: auto;
+
+}
+
+
+div.sub_button 
+{
+	font-weight: bold;
+	margin-top: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+}
+
+label.heading 
+{
+	float: left;
+	width: 7em;
+	text-align: right;
+	margin-right: 1em;
+
+}
+
+
+/*float property: left right inherit none; */
+
+/* normal flow; blocks are stacked on top to eeach other , inline go left to right */
+
+/* inherit: inherit the float of your parent*/
+
+/* floats vertical positioning is determined by the html tag position in the document */
+
+

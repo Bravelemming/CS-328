@@ -1,0 +1,6 @@
+the clear property can stop floats.
+
+float {
+	clear: [left | right | both | none];
+}
+

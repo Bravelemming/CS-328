@@ -1,0 +1,105 @@
+jquery, a library of JS, inside a script tag or .js file
+jquery is a library of methods within your javascript
+
+a library of stuff to make life easier
+
+can link it direclty in a .php file, or you can download it locally.
+
+$ is an objecct
+
+$("double-quoted-element-name") = returns a jquery object representing all of that elements instances in the document
+
+$("p") returns a jquery object corresponding to all of the p elements in the document
+
+theres also a jquery object for javascript DOM objects as well
+
+$(document) 
+
+
+window.onload =
+funciton ()
+{
+	...
+}
+
+// you are calling the $(document) objects 'ready' method
+// with an argument that is a function,
+
+$(document).ready(function()
+	{
+		...
+	}
+)
+
+//when the documents ready event occurs, this jquery read methods argument will be called;
+//and the ready event occurs when the doucment is 'ready' to be manipulated.
+
+
+$(document).ready(
+	function()
+	{
+		//all a's, or links in the page
+		$("a")
+		//on the onclick method
+		$("a").click(
+			function(event)
+			{
+				alert("thanks for visiting!");
+			}
+		)
+	}
+);
+
+
+--
+
+$(document).ready(
+	function()
+	{
+		//all a's, or links in the page
+		$("a")
+		//on the onclick method
+		$("a").click(
+			function(event)
+			{
+				var response = confirm("want to leave?");
+
+				if (!response)
+				{
+					//if the response is false, 
+					//prevent page link
+					event.preventDefault();
+				}
+			}
+		)
+	}
+);
+
+
+
+
+--adding and removing a class attribute from an element?
+
+$("p").addClass9("fancy");
+$("p").removeClass("blargy");
+
+--jquery can also use CSS selectors:  . or #
+
+$("#desiredID") //this is the jquery object for the element with the id="desiredID"
+
+
+--to show navvigation of javascript DOM
+
+var $p = $("<p> i am a new paragraph </p>");
+
+//method append inserts the specific element as the LAST child of the calling element
+//prepend inserts the element as the FIRST child 
+
+$(".info").append("<p>stuff!</p>");
+
+//added a p paragraph with content stuff! as the LAST child of each page element with class="info"
+
+
+
+QUICK AND SLEEZY
+COUNT: 7
